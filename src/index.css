@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+:root {
+  --primary-color: #854ce6;
+  --secondary-color: #191924;
+  --text-color: #fff;
+  --sub-text-color: #ccc;
+  --white-color: #fff;
+  --navbar-shadow: 0 2px 10px 2px #191924;
+}
+
+[data-theme="light"] {
+  --primary-color: #854ce6;
+  --secondary-color: #fff;
+  --text-color: #191924;
+  --sub-text-color: #999;
+  --white-color: #fff;
+  --navbar-shadow: 0 2px 10px 2px #191924;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1.25s ease-in-out;
+}
+
+.fade-in.active {
+  opacity: 1;
+}
+
+nav.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 30;
+  transition: all 0.25s ease-in;
+  background-color: transparent;
+}
+
+nav.navbar.scrolled {
+  background-color: var(--secondary-color);
+  box-shadow: var(--navbar-shadow);
+}
+
+.nav-link {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  margin: 0 20px;
+  cursor: pointer;
+  padding: auto 0 !important;
+  color: var(--text-color) !important;
+}
+
+.nav-link::after,
+.active::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  border-radius: 5px;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: var(--primary-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-link:hover::after,
+.active::after {
+  padding: 0 10px;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.navbar-toggler {
+  border: 0 !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.navbar-toggler i {
+  color: var(--text-color);
+  font-size: 24px;
+}
+
+body {
+  background-color: var(--secondary-color) !important;
+  color: var(--text-color) !important;
+}
+
+.btn-setting {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.25s ease-in-out;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.change-theme {
+  cursor: pointer;
+  transition: 0.3s;
+  position: absolute;
+}
+
+.bx {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+  display: inline-block;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  font-size: 24px;
+}
+
+.bxs-moon:before {
+  content: "\f186";
+  color: var(--text-color);
+}
+
+.bxs-sun:before {
+  content: "\f185";
+  color: var(--text-color);
+}
+
+.banner {
+  margin-top: 100px;
+}
+
+.banner-left,
+.banner-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 20;
+  height: 450px;
+}
+
+.banner-left {
+  align-items: flex-start;
+  color: var(--text-color);
+}
+
+.banner-right {
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-left p {
+  color: var(--sub-text-color);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.banner-left h1 {
+  font-weight: 700;
+  font-size: 52px;
+}
+
+.banner-left h1 span {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px var(--text-color);
+}
+
+.typing-effect {
+  font-size: 24px;
+}
+
+.btn-banner-left {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 3px solid var(--primary-color);
+}
+
+.btn-banner-left:hover {
+  background-color: #fff;
+  border: 3px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-banner-right {
+  background-color: #fff;
+  color: var(--primary-color);
+  border: 3px solid var(--primary-color);
+}
+
+.btn-banner-right:hover {
+  background-color: var(--primary-color);
+  border: 3px solid #fff;
+  color: #fff;
+}
+
+.banner-right img {
+  object-fit: cover;
+  width: 100%;
+}
+
+#home {
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+#about {
+  padding-top: 100px;
+}
+
+@media (min-width: 576px) {
+  .banner-left,
+  .banner-right {
+    height: 600px;
+  }
+}
