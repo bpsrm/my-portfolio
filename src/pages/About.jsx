@@ -1,30 +1,41 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Container, Row, Col } from "react-bootstrap";
+import Profile from "../assets/about-pic.jpg";
 
-export const About = () => {
-  return (
-    <>
-      <Container>
-        <Row>
-          <Col xs={12} md={6}></Col>
-          <Col xs={12} md={6}>
-            <h2>About Me</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-              repellat dolorum eos, delectus officiis obcaecati provident. Saepe
-              inventore, et consequuntur molestias vitae est libero laudantium
-              minima cupiditate nulla sint, velit praesentium, laboriosam quos.
-              Rem dolore aut architecto sit minus odio saepe alias? Voluptatem
-              nesciunt iste tempora quo blanditiis impedit. Saepe, impedit ipsam
-              voluptatem inventore, at voluptates repellat neque consequuntur
-              cum repellendus sunt quisquam, porro vitae excepturi aliquid in
-              minus ullam fugit nisi fugiat ut! Commodi facere voluptates nisi
-              deleniti ratione blanditiis neque nulla officiis hic, cumque eos
-              sit mollitia consectetur, id molestiae maxime laudantium explicabo
-              dignissimos sequi. Totam, voluptates facilis!
-            </p>
-          </Col>
-        </Row>
-      </Container>
-    </>
-  );
-};
+export const About = () => (
+  <>
+    <Container className="pb-5">
+      <div className="section-head">
+        <h6 className="subtitle">My info</h6>
+        <h4 className="title">About Me</h4>
+      </div>
+
+      <Row className="about-content flex-column-reverse flex-md-row">
+        <Col
+          xs={12}
+          md={6}
+          className="text-center d-flex align-items-center justify-content-center"
+        >
+          <div className="about-img">
+            <img src={Profile} alt="" />
+          </div>
+        </Col>
+        <Col xs={12} md={6}>
+          <p className="about-msg">
+            My name is <span className="fw-bold">Ponpitak Sirimart</span>, and I
+            am a recent graduate with a strong interest in pursuing a career
+            related to web development, particularly as a
+            <span className="fw-bold"> Front End Developer.</span> Personally, I
+            am deeply passionate about programming and eager to enhance my
+            skills to excel in this field. <br />
+            <br />
+            In my fourth year at Silpakorn University, I worked on a Senior
+            Project titled "VoiceBrary." This project involved creating a web
+            application aimed at assisting individuals who are visually
+            impaired.
+          </p>
+        </Col>
+      </Row>
+    </Container>
+  </>
+);

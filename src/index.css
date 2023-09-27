@@ -6,6 +6,7 @@
   --sub-text-color: #ccc;
   --white-color: #fff;
   --navbar-shadow: 0 2px 10px 2px #191924;
+  --grey-scale: none;
 }
 
 [data-theme="light"] {
@@ -15,6 +16,7 @@
   --sub-text-color: #999;
   --white-color: #fff;
   --navbar-shadow: 0 2px 10px 2px #191924;
+  --grey-scale: brightness(100%) invert(1);
 }
 
 * {
@@ -36,6 +38,10 @@ html {
 
 .fade-in.active {
   opacity: 1;
+}
+
+.logo {
+  filter: var(--grey-scale);
 }
 
 nav.navbar {
@@ -141,6 +147,15 @@ body {
   color: var(--text-color);
 }
 
+#home {
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+#about {
+  padding-top: 0;
+}
+
 .banner {
   margin-top: 100px;
 }
@@ -155,8 +170,13 @@ body {
 }
 
 .banner-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 20;
   align-items: flex-start;
   color: var(--text-color);
+  height: 350px;
 }
 
 .banner-right {
@@ -204,7 +224,7 @@ body {
 
 .btn-banner-right:hover {
   background-color: var(--primary-color);
-  border: 3px solid #fff;
+  border: 3px solid var(--primary-color);
   color: #fff;
 }
 
@@ -213,18 +233,71 @@ body {
   width: 100%;
 }
 
-#home {
+.section-head {
   margin: 0 auto;
-  padding-top: 100px;
+  width: 50%;
+  text-align: center;
+  border-bottom: 2px solid var(--sub-text-color);
+  margin-bottom: 30px;
+  padding-bottom: 10px;
 }
 
-#about {
-  padding-top: 100px;
+.title {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.subtitle {
+  color: var(--sub-text-color);
+}
+
+.about-content {
+  margin: 0 auto !important;
+}
+
+.about-img {
+  width: 250px;
+  height: 250px;
+  transform: rotate(45deg);
+  overflow: hidden;
+  box-shadow: 0 1px 10px 3px rgba(133, 76, 230, 0.8);
+  margin: 100px auto;
+}
+
+.about-img img {
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
+  border-radius: 10px;
+  transform: rotate(-45deg) scale(1.42);
+}
+
+.about-msg {
+  text-indent: 10px;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+.about-msg span {
+  color: var(--primary-color);
+  letter-spacing: 1px;
 }
 
 @media (min-width: 576px) {
   .banner-left,
   .banner-right {
     height: 600px;
+  }
+
+  #about {
+    padding-top: 100px;
+  }
+
+  .about-content {
+    padding-top: 100px;
+  }
+
+  .about-img {
+    margin-top: 0;
   }
 }

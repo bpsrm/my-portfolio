@@ -4,13 +4,19 @@ import { Particle } from "../components/Particle-Net";
 import Profile from "../assets/profile.png";
 import TypingEffect from "react-typing-effect";
 
+import resume from "../assets/my-resume.pdf";
+
 export const Banner = () => {
   return (
     <>
       <Container className="banner" id="home">
         <Particle />
         <Row className="flex-column-reverse flex-md-row">
-          <Col xs={12} md={6} className="banner-left px-3">
+          <Col
+            xs={12}
+            md={6}
+            className="banner-left px-3 justify-content-lg-center justify-content-start "
+          >
             <p className="text-uppercase">portfolio/2023</p>
             <h1>
               Hello, I'm <span>Bank!</span>
@@ -34,8 +40,9 @@ export const Banner = () => {
                 <i className="fa-brands fa-github pe-3"></i> Github
               </a>
               <a
-                href="https://github.com/bpsrm"
+                href={resume}
                 className="btn-setting btn-banner-right ms-4"
+                download="ponpitak-resume-2023.pdf"
               >
                 <i className="fa-solid fa-file pe-3"></i> Resume
               </a>

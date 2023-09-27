@@ -27,7 +27,7 @@ const Navigation = () => {
           className="text-center me-0"
           style={{ width: "100px" }}
         >
-          <img src={Logo} alt="" className="w-50" />
+          <img src={Logo} alt="" className="w-50 logo" />
         </Navbar.Brand>
         <button
           className="navbar-toggler"
