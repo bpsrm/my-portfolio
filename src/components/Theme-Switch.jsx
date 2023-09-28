@@ -14,7 +14,7 @@ export const SwitchToggle = () => {
   return (
     <div className="dark-mode">
       <span onClick={toggleTheme} className="change-theme">
-        {isDarkMode ? "Satan" : "Light Bringer"}
+        {isDarkMode ? "Eclipse" : "Illuminate"}
         <i
           className={`bx  ${
             isDarkMode ? "fa-solid fa-moon ps-2" : "fa-solid fa-sun ps-2"
