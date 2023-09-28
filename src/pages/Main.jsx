@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import { Banner } from "./Banner";
 import { About } from "./About";
+import { Skills } from "./Skills";
+import { Projects } from "./Projects";
 
 export const Main = () => {
   const [visibleSections, setVisibleSections] = useState([]);
@@ -45,6 +47,22 @@ export const Main = () => {
         }`}
       >
         <About />
+      </div>
+      <div
+        id="skills"
+        className={`fade-in ${
+          visibleSections.includes("skills") ? "active" : ""
+        }`}
+      >
+        <Skills />
+      </div>
+      <div
+        id="projects"
+        className={`fade-in ${
+          visibleSections.includes("projects") ? "active" : ""
+        }`}
+      >
+        <Projects />
       </div>
     </>
   );

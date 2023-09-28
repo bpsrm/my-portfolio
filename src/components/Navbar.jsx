@@ -41,79 +41,71 @@ const Navigation = () => {
           <i className="fa-solid fa-bars"></i>
         </button>
         <Navbar.Collapse id="navbar-nav">
-          <Nav className="me-auto justify-content-center w-100">
-            <Link
-              activeClass="active"
-              to="home"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className="nav-link navbar-link"
-            >
-              Home
-            </Link>
-            <Link
-              activeClass="active"
-              to="about"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className="nav-link navbar-link"
-            >
-              About
-            </Link>
-            <Link
-              activeClass="active"
-              to="skills"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className="nav-link navbar-link"
-            >
-              Skills
-            </Link>
-            <Link
-              activeClass="active"
-              to="projects"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className="nav-link navbar-link"
-            >
-              Projects
-            </Link>
-            <Link
-              activeClass="active"
-              to="experiences"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className="nav-link navbar-link"
-            >
-              Experiences
-            </Link>
-            <Link
-              activeClass="active"
-              to="contact"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className="nav-link navbar-link"
-            >
-              Contact
-            </Link>
-          </Nav>
-          <Nav
-            style={{
-              width: "100px",
-            }}
-          >
-            <Nav.Item
-              className="ms-3 ms-lg-0 mt-3 mt-lg-0 w-100"
-              style={{ height: "40px", padding: "10px" }}
-            >
-              <SwitchToggle />
-            </Nav.Item>
+          <Nav className="me-auto justify-content-evenly w-100">
+            <div></div>
+            <div className="d-lg-flex justify-content-center align-items-center">
+              <Link
+                activeClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className="nav-link navbar-link"
+              >
+                Home
+              </Link>
+              <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className="nav-link navbar-link"
+              >
+                About
+              </Link>
+              <Link
+                activeClass="active"
+                to="skills"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className="nav-link navbar-link"
+              >
+                Skills
+              </Link>
+              <Link
+                activeClass="active"
+                to="projects"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className="nav-link navbar-link"
+              >
+                Projects
+              </Link>
+              <Link
+                activeClass="active"
+                to="experiences"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className="nav-link navbar-link"
+              >
+                Experiences
+              </Link>
+              <Link
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className="nav-link navbar-link"
+              >
+                Contact
+              </Link>
+            </div>
+            <SwitchToggle />
           </Nav>
         </Navbar.Collapse>
       </Container>

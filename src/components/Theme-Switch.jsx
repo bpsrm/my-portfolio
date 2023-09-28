@@ -11,19 +11,17 @@ export const SwitchToggle = () => {
     else localStorage.setItem("theme", "dark");
   };
 
-  const toggleStyle = {
-    display: "flex",
-    justifyContent: "center",
-    alignItem: "center",
-  };
-
   return (
-    <div className="dark-mode" style={toggleStyle}>
-      <i
-        className={`bx change-theme ${isDarkMode ? "bxs-moon" : "bxs-sun"}`}
-        id="theme-button"
-        onClick={toggleTheme}
-      ></i>
+    <div className="dark-mode">
+      <span onClick={toggleTheme} className="change-theme">
+        {isDarkMode ? "Satan" : "Light Bringer"}
+        <i
+          className={`bx  ${
+            isDarkMode ? "fa-solid fa-moon ps-2" : "fa-solid fa-sun ps-2"
+          }`}
+          id="theme-button"
+        ></i>
+      </span>
     </div>
   );
 };

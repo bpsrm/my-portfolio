@@ -10,7 +10,13 @@ export const Particle = () => {
   }, []);
 
   const particlesLoaded = useCallback(async (container) => {
-    await console.log(container);
+    const particles = container.particles;
+    const currentParticleCount = particles.count;
+    const maxParticleCount = 30;
+
+    if (currentParticleCount > maxParticleCount) {
+      particles.removeQuantity(currentParticleCount - maxParticleCount);
+    }
   }, []);
 
   return (
@@ -35,11 +41,11 @@ export const Particle = () => {
           interactivity: {
             events: {
               onClick: {
-                enable: true,
+                enable: false,
                 mode: "push",
               },
               onHover: {
-                enable: false,
+                enable: true,
                 mode: "repulse",
               },
               resize: true,
@@ -80,7 +86,7 @@ export const Particle = () => {
                 enable: true,
                 area: 800,
               },
-              value: 80,
+              value: 50,
             },
             opacity: {
               value: 0.5,
