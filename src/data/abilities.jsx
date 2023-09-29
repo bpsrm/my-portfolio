@@ -22,12 +22,12 @@ export const abilities = {
     },
     {
       id: 5,
-      skill: "CodeIgniter 4",
+      skill: "CodeIgniter",
       icon: "https://www.svgrepo.com/show/353579/codeigniter.svg",
     },
     {
       id: 6,
-      skill: "Laravel 8",
+      skill: "Laravel",
       icon: "https://www.svgrepo.com/show/376332/laravel.svg",
     },
   ],

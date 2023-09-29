@@ -51,45 +51,44 @@ export const Projects = () => {
   }
 
   return (
-    <>
-      <Container className="pb-5">
-        <div className="section-head">
-          <h6 className="subtitle">Workbench</h6>
-          <h4 className="title">My Project</h4>
-        </div>
-        <div className="btn-group d-flex justify-content-center">
-          <button
-            className={`btn-setting ${
-              currentCategory === "all" ? "project-btn project-active" : ""
-            }`}
-            onClick={() => setCurrentCategory("all")}
-          >
-            All
-          </button>
-          <button
-            className={`btn-setting ${
-              currentCategory === "react" ? "project-btn project-active" : ""
-            }`}
-            onClick={() => setCurrentCategory("react")}
-          >
-            React
-          </button>
-          <button
-            className={`btn-setting ${
-              currentCategory === "vue" ? "project-btn project-active" : ""
-            }`}
-            onClick={() => setCurrentCategory("vue")}
-          >
-            Vue
-          </button>
-        </div>
-        <Row>
-          <ProjectDisplay
-            projects={projectsToShow}
-            handleShowModal={handleShowModal}
-          />
-        </Row>
-      </Container>
+    <Container className="pb-5">
+      <div className="section-head">
+        <h6 className="subtitle">Workbench</h6>
+        <h4 className="title">My Project</h4>
+      </div>
+      <div className="btn-group d-flex justify-content-center">
+        <button
+          className={`btn-setting ${
+            currentCategory === "all" ? "project-btn project-active" : ""
+          }`}
+          onClick={() => setCurrentCategory("all")}
+        >
+          All
+        </button>
+        <button
+          className={`btn-setting ${
+            currentCategory === "react" ? "project-btn project-active" : ""
+          }`}
+          onClick={() => setCurrentCategory("react")}
+        >
+          React
+        </button>
+        <button
+          className={`btn-setting ${
+            currentCategory === "vue" ? "project-btn project-active" : ""
+          }`}
+          onClick={() => setCurrentCategory("vue")}
+        >
+          Vue
+        </button>
+      </div>
+      <Row>
+        <ProjectDisplay
+          projects={projectsToShow}
+          handleShowModal={handleShowModal}
+        />
+      </Row>
+
       <Modal
         show={showModal}
         onHide={handleCloseModal}
@@ -137,6 +136,6 @@ export const Projects = () => {
           </div>
         </Modal.Body>
       </Modal>
-    </>
+    </Container>
   );
 };

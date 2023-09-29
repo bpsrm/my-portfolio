@@ -6,6 +6,21 @@ import { Link } from "react-scroll";
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+
+  const handleScroll = () => {
+    const sections = document.querySelectorAll(".fade-in");
+    const offset = 10;
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - offset;
+      const sectionBottom = section.offsetTop + section.offsetHeight;
+
+      if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+        setActiveSection(section.id);
+      }
+    });
+  };
 
   useEffect(() => {
     const onScroll = () => {
@@ -14,10 +29,16 @@ const Navigation = () => {
       } else {
         setScrolled(false);
       }
+      handleScroll();
     };
+
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const handleLinkClick = (sectionId) => {
+    setActiveSection(sectionId);
+  };
 
   return (
     <Navbar expand="lg" className={scrolled ? "scrolled navbar-bg" : ""}>
@@ -50,7 +71,10 @@ const Navigation = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="nav-link navbar-link"
+                onClick={() => handleLinkClick("home")}
+                className={`nav-link navbar-link ${
+                  activeSection === "home" ? "active" : ""
+                }`}
               >
                 Home
               </Link>
@@ -60,7 +84,10 @@ const Navigation = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="nav-link navbar-link"
+                onClick={() => handleLinkClick("about")}
+                className={`nav-link navbar-link ${
+                  activeSection === "about" ? "active" : ""
+                }`}
               >
                 About
               </Link>
@@ -70,7 +97,10 @@ const Navigation = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="nav-link navbar-link"
+                onClick={() => handleLinkClick("skills")}
+                className={`nav-link navbar-link ${
+                  activeSection === "skills" ? "active" : ""
+                }`}
               >
                 Skills
               </Link>
@@ -80,7 +110,10 @@ const Navigation = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="nav-link navbar-link"
+                onClick={() => handleLinkClick("projects")}
+                className={`nav-link navbar-link ${
+                  activeSection === "projects" ? "active" : ""
+                }`}
               >
                 Projects
               </Link>
@@ -90,7 +123,10 @@ const Navigation = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="nav-link navbar-link"
+                onClick={() => handleLinkClick("experiences")}
+                className={`nav-link navbar-link ${
+                  activeSection === "experiences" ? "active" : ""
+                }`}
               >
                 Experiences
               </Link>
@@ -100,7 +136,10 @@ const Navigation = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="nav-link navbar-link"
+                onClick={() => handleLinkClick("contact")}
+                className={`nav-link navbar-link ${
+                  activeSection === "contact" ? "active" : ""
+                }`}
               >
                 Contact
               </Link>

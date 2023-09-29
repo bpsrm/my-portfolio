@@ -5,34 +5,39 @@ import { Banner } from "./Banner";
 import { About } from "./About";
 import { Skills } from "./Skills";
 import { Projects } from "./Projects";
+import { Experience } from "./Experience";
+import { Contact } from "./Contact";
 
 export const Main = () => {
   const [visibleSections, setVisibleSections] = useState([]);
 
   const handleScroll = () => {
     const sections = document.querySelectorAll(".fade-in");
-    const offset = 50;
+    const offset = 10;
+
+    const newVisibleSections = [];
 
     sections.forEach((section) => {
       const sectionTop = section.getBoundingClientRect().top;
       const sectionBottom = section.getBoundingClientRect().bottom;
 
       if (sectionTop - offset <= window.innerHeight && sectionBottom >= 20) {
-        setVisibleSections((prevVisibleSections) => [
-          ...prevVisibleSections,
-          section.id,
-        ]);
-      } else {
-        setVisibleSections((prevVisibleSections) =>
-          prevVisibleSections.filter((id) => id !== section.id)
-        );
+        newVisibleSections.push(section.id);
       }
     });
+
+    setVisibleSections(newVisibleSections);
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const throttledScrollHandler = () => {
+      window.requestAnimationFrame(handleScroll);
+    };
+
+    window.addEventListener("scroll", throttledScrollHandler);
+    return () => {
+      window.removeEventListener("scroll", throttledScrollHandler);
+    };
   }, []);
 
   return (
@@ -63,6 +68,22 @@ export const Main = () => {
         }`}
       >
         <Projects />
+      </div>
+      <div
+        id="experiences"
+        className={`fade-in ${
+          visibleSections.includes("experiences") ? "active" : ""
+        }`}
+      >
+        <Experience />
+      </div>
+      <div
+        id="contact"
+        className={`fade-in ${
+          visibleSections.includes("contact") ? "active mt-2" : ""
+        }`}
+      >
+        <Contact />
       </div>
     </>
   );

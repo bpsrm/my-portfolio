@@ -32,7 +32,7 @@ export const Skills = () => {
 
   return (
     <>
-      <Container className="pb-5">
+      <Container className="pb-5 mb-2">
         <div className="section-head">
           <h6 className="subtitle">Abilities</h6>
           <h4 className="title">My Experience</h4>
