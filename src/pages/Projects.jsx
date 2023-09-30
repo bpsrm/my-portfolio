@@ -122,6 +122,7 @@ export const Projects = () => {
                 target="_blank"
                 rel="noreferrer"
               >
+                <i className="fa-solid fa-arrow-up-right-from-square pe-2"></i>
                 Demo
               </a>
               <a
@@ -130,7 +131,7 @@ export const Projects = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                Source
+                <i className="fa-brands fa-github pe-2"></i> Source
               </a>
             </div>
           </div>
