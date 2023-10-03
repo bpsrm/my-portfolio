@@ -17,6 +17,6 @@ export const contact = [
   {
     id: 4,
     icon: "fa-brands fa-instagram",
-    link: "https://www.instagram.com/bp.srm/",
+    link: "https://www.instagram.com/bp.srm",
   },
 ];
