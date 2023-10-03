@@ -1,11 +1,12 @@
-# React + Vite
+# PORTFOLIO/23 | React + Vite
 
 <br/>
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Explore my 2023 portfolio, meticulously crafted with React and Vite tools. Delve into a treasure trove of information about my skills, noteworthy achievements, and enriching university experiences.
 <br/>
 
-Currently, two official plugins are available:
+## Check in URL:
+- <a href="https://portfolio2023-bpsrm.web.app/">Portfolio urls</a>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Command to run this project
+- npm start 
+- npm run dev
