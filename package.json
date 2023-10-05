@@ -19,6 +19,7 @@
     "react-particles": "^2.12.2",
     "react-router-dom": "^6.16.0",
     "react-scroll": "^1.8.9",
+    "react-spinners": "^0.13.8",
     "react-typing-effect": "^2.0.5",
     "tsparticles-slim": "^2.12.0"
   },

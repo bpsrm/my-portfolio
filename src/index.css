@@ -39,8 +39,29 @@
   font-family: "Poppins", sans-serif;
 }
 
+.loader {
+  border-radius: 20px;
+  background-color: var(--glass-bg) !important;
+}
+
 html {
   overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  height: 100vh;
+  width: 5px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--modal-bg);
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 5px;
 }
 
 body {
