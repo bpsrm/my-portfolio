@@ -5,6 +5,7 @@ import dandelion from "../assets/projects/FinalProject-Unity.webp";
 import voicebrary from "../assets/projects/senior-project.webp";
 import todo from "../assets/projects/todoapp.webp";
 import discord from "../assets/projects/discord-clone.webp";
+import redux from "../assets/projects/crud-typescript-redux.png";
 
 export const projects = {
   project: [
@@ -79,6 +80,24 @@ export const projects = {
       stack: ["HTML", "CSS", "JavaScript", "JSX", "Vue.js"],
       date: "Sep 2023",
     },
+    {
+      id: 8,
+      img: redux,
+      title: "TypeScript Redux Toolkit CRUD",
+      desc: "CRUD project with React TypeScript and use Redux Toolkit & LocalStorage to manage data",
+      link: "https://crud-react-ts-redux.web.app/",
+      git: "https://github.com/bpsrm/react-ts-redux",
+      stack: [
+        "HTML",
+        "CSS",
+        "TypeScript",
+        "TSX",
+        "React.js",
+        "Redux Toolkit",
+        "Local Storage",
+      ],
+      date: "Dec 2023",
+    },
   ],
   react: [
     {
@@ -100,6 +119,24 @@ export const projects = {
       git: "https://github.com/bpsrm/TodoApp",
       stack: ["HTML", "CSS", "JavaScript", "JSX", "React.js"],
       date: "Sep 2023 - Present",
+    },
+    {
+      id: 3,
+      img: redux,
+      title: "TypeScript Redux Toolkit CRUD",
+      desc: "CRUD project with React TypeScript and use Redux Toolkit & LocalStorage to manage data",
+      link: "https://crud-react-ts-redux.web.app/",
+      git: "https://github.com/bpsrm/react-ts-redux",
+      stack: [
+        "HTML",
+        "CSS",
+        "TypeScript",
+        "TSX",
+        "React.js",
+        "Redux Toolkit",
+        "Local Storage",
+      ],
+      date: "Dec 2023",
     },
   ],
   vue: [

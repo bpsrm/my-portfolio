@@ -92,7 +92,7 @@ export const Projects = () => {
       <Modal
         show={showModal}
         onHide={handleCloseModal}
-        className="text-black px-0 mx-0"
+        className="text-black px-0 mx-0 fade"
       >
         <Modal.Header className="justify-content-end">
           <button
