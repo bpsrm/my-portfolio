@@ -17,16 +17,21 @@ export const abilities = {
     },
     {
       id: 4,
+      skill: "Next.js",
+      icon: "https://www.svgrepo.com/show/306466/next-dot-js.svg",
+    },
+    {
+      id: 5,
       skill: "Vue.js",
       icon: "https://www.svgrepo.com/show/493625/vue-vuejs-javascript-js-framework.svg",
     },
     {
-      id: 5,
+      id: 6,
       skill: "CodeIgniter",
       icon: "https://www.svgrepo.com/show/353579/codeigniter.svg",
     },
     {
-      id: 6,
+      id: 7,
       skill: "Laravel",
       icon: "https://www.svgrepo.com/show/376332/laravel.svg",
     },
@@ -44,21 +49,31 @@ export const abilities = {
     },
     {
       id: 3,
+      skill: "Express.js",
+      icon: "https://www.svgrepo.com/show/353724/express.svg",
+    },
+    {
+      id: 4,
       skill: "SQL",
       icon: "https://www.svgrepo.com/show/374093/sql.svg",
     },
     {
-      id: 4,
+      id: 5,
+      skill: "MongoDB",
+      icon: "https://www.svgrepo.com/show/354090/mongodb.svg",
+    },
+    {
+      id: 6,
       skill: "JavaScript",
       icon: "https://www.svgrepo.com/show/353925/javascript.svg",
     },
     {
-      id: 5,
+      id: 7,
       skill: "jquery",
       icon: "https://www.svgrepo.com/show/452242/jquery.svg",
     },
     {
-      id: 6,
+      id: 8,
       skill: "Python",
       icon: "https://www.svgrepo.com/show/452091/python.svg",
     },

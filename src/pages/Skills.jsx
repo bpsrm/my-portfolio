@@ -35,7 +35,7 @@ export const Skills = () => {
       <Container className="pb-5 mb-2">
         <div className="section-head">
           <h6 className="subtitle">Abilities</h6>
-          <h4 className="title">My Experience</h4>
+          <h4 className="title">My Skills</h4>
         </div>
         <Row>
           <Col xs={12} md={6}>
